@@ -1,0 +1,71 @@
+.header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  padding: 22px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--header-shadow);
+  transition: all 0.3s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-family: var(--font-display);
+  background: var(--header-logo-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: baseline;
+}
+.logo p {
+  color: var(--header-logo-sub);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.themeToggle:hover {
+  background-color: var(--bg-elevated);
+  box-shadow: none;
+  border-color: transparent;
+}

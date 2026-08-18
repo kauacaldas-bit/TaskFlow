@@ -1,0 +1,61 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(100%, 420px);
+  padding: 28px 32px;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 { color: var(--text); font-size: 1.25rem; }
+
+.card input,
+.card select {
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.card input:focus,
+.card select:focus { border-color: var(--border-strong); box-shadow: 0 0 0 3px var(--border); }
+.card select option { color: var(--text); background: var(--bg); }
+.cidade { color: var(--text-dim); font-size: 0.82rem; }
+
+.fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 2px 9px;
+  font-size: 1.35rem;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+}
+
+.botoes { display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; }
+.botoes button { padding: 9px 18px; }
+.botoes button:last-child { color: var(--bg); background: var(--text); border-color: var(--text); font-weight: 700; }

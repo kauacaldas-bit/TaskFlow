@@ -1,0 +1,139 @@
+/* Container do item da tarefa */
+.tarefa {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 10px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.tarefa:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 16px var(--border);
+}
+
+/* Área de conteúdo do card */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Texto da tarefa (ocupa o espaço livre) */
+.textoTarefa {
+  color: var(--text);
+  word-break: break-word;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Badges (cidade, prioridade) */
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Estilo para quando a tarefa está concluída */
+.concluida .textoTarefa,
+.texto-tarefa {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+/* Tags de Cidade e Prioridade */
+.badge-cidade {
+  font-size: 0.75rem;
+  color: #e0e0e0;
+  background-color: #262626;
+  border: 1px solid #444444;
+  padding: 3px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-prioridade {
+  font-size: 0.75rem;
+  padding: 3px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Cores das prioridades em tema escuro */
+.badge-alta {
+  background-color: #3a1515;
+  color: #ff6b6b;
+  border: 1px solid #662222;
+}
+
+.badge-media {
+  background-color: #3a3015;
+  color: #ffd166;
+  border: 1px solid #665222;
+}
+
+.badge-baixa {
+  background-color: #153a20;
+  color: #06d6a0;
+  border: 1px solid #226638;
+}
+
+/* Área de botões de ação */
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 8px;
+}
+
+/* Botões do card */
+.tarefa button {
+  background-color: var(--bg-elevated-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.tarefa button:hover {
+  background-color: var(--border-strong);
+}
+
+.btnDeletar {
+  background-color: #3a1515 !important;
+  color: #ff6b6b !important;
+  border: 1px solid #662222 !important;
+}
+
+.btnDeletar:hover {
+  background-color: #ff6b6b !important;
+  color: #000000 !important;
+}
+
+/* Reseta estilos padrões da lista no Kanban */
+#lista-tarefas,
+.coluna ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+}

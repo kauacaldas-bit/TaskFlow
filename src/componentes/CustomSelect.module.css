@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  min-width: 130px;
+}
+
+.selected {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.selected:hover {
+  border-color: var(--border-strong);
+}
+
+.selected.open {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 10px var(--border);
+}
+
+.arrow {
+  margin-left: 10px;
+  color: var(--text-faint);
+}
+
+.optionsList {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(20, 20, 20, 0.1);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  z-index: 50;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.optionItem {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: transparent;
+}
+
+.optionItem:hover {
+  background-color: var(--border-strong);
+}
+
+.optionItem.active {
+  font-weight: bold;
+  background-color: var(--bg-elevated);
+}
