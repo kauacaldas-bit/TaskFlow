@@ -92,31 +92,8 @@
   gap: 8px;
 }
 
-.btnFullscreen {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-dim);
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 14px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  width: 100%;
-}
-
-.btnFullscreen:hover {
-  background: var(--bg-elevated-2);
-  border-color: var(--border-strong);
-  color: var(--text);
-}
-
 .btnLogout {
+  margin-top: auto;
   color: var(--text);
   background: transparent;
   border: 1px solid var(--border);
