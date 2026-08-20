@@ -4,7 +4,7 @@ import Header from '../componentes/Header';
 import ListaTarefas from '../componentes/ListaTarefas';
 import ModalTarefa from '../componentes/ModalTarefa';
 
-const URL_API = 'https://6a85b59e9c451dc67a640568.mockapi.io/tarefas';
+const URL_API = 'https://6a85b59e9c451dc67a640568.mockapi.io/usuario';
 
 function Dashboard({ theme, onToggleTheme }) {
   const [tarefas, setTarefas] = useState([]);
