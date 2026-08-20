@@ -82,7 +82,12 @@ function Dashboard({ theme, onToggleTheme }) {
 
   async function moverTarefa(id, novaColuna) {
     try {
-      const { data: tarefaMovida } = await axios.patch(URL_API + '/' + id, { coluna: novaColuna });
+      // Como o MockAPI bloqueia PATCH via CORS (ele só permite GET, PUT, POST, DELETE, OPTIONS),
+      // precisamos buscar a tarefa atual, atualizar a coluna e enviar via PUT.
+      const tarefaAtual = tarefas.find(t => t.id === id);
+      const tarefaAtualizada = { ...tarefaAtual, coluna: novaColuna };
+      
+      const { data: tarefaMovida } = await axios.put(URL_API + '/' + id, tarefaAtualizada);
       setTarefas((atuais) => atuais.map((t) => (t.id === id ? tarefaMovida : t)));
     } catch (e) {
       setErro('Erro ao mover tarefa. Tente novamente.');
